@@ -1,18 +1,16 @@
-import React, { lazy, Suspense } from "react";
-
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NoPageFound from "./components/pages/NoPageFound";
 import Home from "./components/pages/Home";
 import Navbar from "./components/shared/Navbar";
 import Footer from "./components/shared/Footer";
 import Loading from "./components/shared/Loading";
+import Products from "./components/pages/Products";
+import Pricing from "./components/pages/Pricing";
+import Blog from "./components/pages/Blog";
 
 const Userprofile = lazy(() => delay(import('./components/pages/Userprofile')));
 
-// // lazy import or // dynamic import
-// const Userprofile = React.lazy(() =>
-//   delay(import("./components/pages/Userprofile"))
-// );
 
 // delay is an async function which will delay importing of file by 1 seconds
 async function delay(promise: any) {
@@ -24,9 +22,6 @@ async function delay(promise: any) {
 
 const App = () => {
 
-   const [count , setCount ] = React.useState(0)
-
-
   return (
     <BrowserRouter>
       <Navbar />
@@ -35,6 +30,9 @@ const App = () => {
         <Routes>
           <Route path="*" element={<NoPageFound />} />
           <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/blog" element={<Blog />} />
           <Route
             path="/user-profile"
             element={
