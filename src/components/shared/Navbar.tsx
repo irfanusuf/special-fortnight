@@ -138,29 +138,28 @@ function Navbar() {
             }}
           >
             <Button
+            color="secondary"
               onClick={() => {
                 navigate("/contact");
               }}
               variant="outlined"
-              sx={{
-                color: "white",
-                border: "1px solid white",
+              sx={{ 
                 borderRadius: "20px",
+                color : "white",
+                border : "1px solid white"
               }}
             >
               Book a Call
             </Button>
 
             <Button
+            color="primary"
               onClick={() => {
                 navigate("/login");
               }}
               variant="contained"
               sx={{
-                color: "black",
-                border: "1px solid white",
                 borderRadius: "20px",
-                backgroundColor: "white",
                 marginX: "10px",
               }}
             >

@@ -12,7 +12,7 @@ import Blog from "./components/pages/Blog";
 const Userprofile = lazy(() => delay(import('./components/pages/Userprofile')));
 
 
-// delay is an async function which will delay importing of file by 1 seconds
+// delay is an async function which will delay importing of file by 3 seconds
 async function delay(promise: any) {
   await new Promise((resolve) => {
     setTimeout(resolve, 3000);

@@ -1,8 +1,14 @@
-import React from 'react'
+
+import  TextEditor from '../molecules/TextEditor'
 
 const Blog = () => {
   return (
-    <div>Blog</div>
+    <div>
+
+
+    <TextEditor/>
+
+    </div>
   )
 }
 
