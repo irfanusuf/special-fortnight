@@ -44,3 +44,4 @@ const apiInstance =
 
 export const UserDataRequest = () => apiInstance("/user/getuser", "APIREQUEST", "APISUCCESS", "APIFAILURE");
 export const CreateBlog = (formData : any) => apiInstance("/user/create/blog" ,"APIREQUEST" , "APISUCCESS"  ,  "APIFAILURE" , formData)
+export const fetchBlogs = () => apiInstance("/user/fetch/blogs" ,"APIREQUEST" , "FETCHBLOGSAPISUCCESS" ,  "APIFAILURE" )
