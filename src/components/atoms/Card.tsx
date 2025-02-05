@@ -43,7 +43,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   ],
 }));
 
-export default function BlogCard() {
+export default function   BlogCard() {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {

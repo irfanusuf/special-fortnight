@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import BlogCard from "../atoms/Card";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchBlogs } from "../../redux/Actions";
@@ -16,7 +16,7 @@ const Blogs = () => {
 
   return (
     <Container sx={{display : "flex", gap : 3}}>
-      {blogs.map((blog: any) => (
+      {blogs.map(() => 
         <BlogCard />
 
         //   <div
@@ -24,7 +24,7 @@ const Blogs = () => {
         //     dangerouslySetInnerHTML={{ __html: blog.content }}
         //   />
  
-      ))}
+      )}
     </Container>
   );
 };

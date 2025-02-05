@@ -42,6 +42,6 @@ const apiInstance =
     }
   };
 
-export const UserDataRequest = () => apiInstance("/user/getuser", "APIREQUEST", "APISUCCESS", "APIFAILURE");
-export const CreateBlog = (formData : any) => apiInstance("/user/create/blog" ,"APIREQUEST" , "APISUCCESS"  ,  "APIFAILURE" , formData)
-export const fetchBlogs = () => apiInstance("/user/fetch/blogs" ,"APIREQUEST" , "FETCHBLOGSAPISUCCESS" ,  "APIFAILURE" )
+export const UserDataRequest = () => apiInstance("/user/getuser", "API_REQUEST", "API_SUCCESS", "API_FAILURE");
+export const CreateBlog = (formData : any) => apiInstance("/user/create/blog" ,"API_REQUEST" , "API_SUCCESS"  ,  "API_FAILURE" , formData)
+export const fetchBlogs = () => apiInstance("/user/fetch/blogs" ,"API_REQUEST" , "FETCH_BLOGS_SUCCESS" ,  "API_FAILURE" )

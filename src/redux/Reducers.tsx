@@ -17,21 +17,26 @@ const userIntialState : stateTypes= {
 
 export const userReducer = createReducer(userIntialState, (builder : any): void => {
   builder
-    .addCase("APIREQUEST", (state : stateTypes) => {
+    .addCase("API_REQUEST", (state : stateTypes) => {
       state.loading = true;
     })
-    .addCase("APISUCCESS" ,(state : stateTypes , action : stateTypes)=>{
+    .addCase("API_SUCCESS" ,(state : stateTypes , action : stateTypes)=>{
       state.loading = false
       state.message = action.message
       state.payload = action.payload;
     })
-    .addCase("FETCHBLOGSAPISUCCESS" ,(state : stateTypes , action : stateTypes)=>{
+    .addCase("FETCH_BLOGS_SUCCESS" ,(state : stateTypes , action : stateTypes)=>{
       state.loading = false
       state.message = action.message
       state.blogs = action.payload;
     })
-    .addCase("APIFAILURE", (state :stateTypes) => {
+    .addCase("API_FAILURE", (state :stateTypes) => {
       state.loading = false;
       state.message = "Server Error | 404"
-    }) 
+    })
+    .addCase("CLEAR_MESSAGE" , (state :stateTypes)=>{
+
+      state.message = ""
+
+    })
 });
